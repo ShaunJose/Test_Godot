@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://MainScreen/fonts/my_font_44.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/my_font_44.tres" type="DynamicFont" id=1]
+
 
 [node name="MenuItem" type="Button"]
 
