@@ -10,9 +10,14 @@ config_version=3
 
 [application]
 
-config/name="tpdown_final"
-run/main_scene="res://World.tscn"
-config/icon="res://icon.png"
+config/name="Test_Godot"
+run/main_scene="res://MainScreen/MainScreen.tscn"
+config/icon="res://MainScreen/game_logo.png"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
 
 [input]
 
@@ -29,4 +34,5 @@ shoot=[ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_n
 
 [rendering]
 
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"
