@@ -3,6 +3,7 @@ extends Control
 var scene_global
 
 func _ready():
+	$Menu/MenuItems/Resume.grab_focus()
 	for item in $Menu/MenuItems.get_children():
 		item.connect("pressed", self, "_on_Menu_Item_Pressed", [item.dest_scene])
 		
