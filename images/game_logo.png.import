@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/game_logo.png-37a870ec99bffdb77e5e8d73003d2957.stex"
+path="res://.import/game_logo.png-51208890158e5ed3dd849f86a05616d7.stex"
 
 [deps]
 
-source_file="res://MainScreen/game_logo.png"
-dest_files=[ "res://.import/game_logo.png-37a870ec99bffdb77e5e8d73003d2957.stex" ]
+source_file="res://images/game_logo.png"
+dest_files=[ "res://.import/game_logo.png-51208890158e5ed3dd849f86a05616d7.stex" ]
 
 [params]
 

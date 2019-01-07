@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://MainScreen/game_logo.png" type="Texture" id=1]
+[ext_resource path="res://images/game_logo.png" type="Texture" id=1]
 [ext_resource path="res://MainScreen/MenuItems/Resume.tscn" type="PackedScene" id=2]
 [ext_resource path="res://MainScreen/MenuItems/NewGame.tscn" type="PackedScene" id=3]
 [ext_resource path="res://MainScreen/MenuItems/SavedReplays.tscn" type="PackedScene" id=4]
