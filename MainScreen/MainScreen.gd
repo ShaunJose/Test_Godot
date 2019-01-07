@@ -5,7 +5,7 @@ extends Control
 # var b = "textvar"
 
 func _ready():
-	for item in $Menu/CentralRow/MenuItems.get_children():
+	for item in $Menu/MenuItems.get_children():
 		item.connect("pressed", self, "_on_Menu_Item_Pressed", [item.dest_scene])
 		
 func _on_Menu_Item_Pressed(dest_scene):
