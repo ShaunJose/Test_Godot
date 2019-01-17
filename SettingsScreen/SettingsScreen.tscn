@@ -5,7 +5,7 @@
 [ext_resource path="res://fonts/my_font_30.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Difficulty.gd" type="Script" id=4]
 
-[node name="Settings" type="Control" index="0"]
+[node name="Settings" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -116,6 +116,10 @@ margin_right = 430.0
 margin_bottom = 100.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_neighbour_left = NodePath("../Highestnt")
+focus_neighbour_top = NodePath("../../Difficulty/Easy")
+focus_neighbour_right = NodePath("../Lower")
+focus_neighbour_bottom = NodePath("../../Volume/VolSlider")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -129,7 +133,7 @@ group = null
 text = "Low"
 flat = false
 align = 0
-_sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
+_sections_unfolded = [ "Anchor", "Focus", "Margin", "custom_fonts" ]
 
 [node name="Lower" type="CheckBox" parent="Graphics" index="2"]
 
@@ -142,6 +146,10 @@ margin_right = 703.0
 margin_bottom = 100.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_neighbour_left = NodePath("../Low")
+focus_neighbour_top = NodePath("../../Difficulty/Normal")
+focus_neighbour_right = NodePath("../Highestnt")
+focus_neighbour_bottom = NodePath("../../Volume/VolSlider")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -155,7 +163,7 @@ group = null
 text = "Lower"
 flat = false
 align = 0
-_sections_unfolded = [ "Margin", "custom_fonts" ]
+_sections_unfolded = [ "Focus", "Margin", "custom_fonts" ]
 
 [node name="Highestnt" type="CheckBox" parent="Graphics" index="3"]
 
@@ -168,6 +176,10 @@ margin_right = 1004.0
 margin_bottom = 100.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_neighbour_left = NodePath("../Lower")
+focus_neighbour_top = NodePath("../../Difficulty/BigBoi")
+focus_neighbour_right = NodePath("../Low")
+focus_neighbour_bottom = NodePath("../../Volume/VolSlider")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -181,7 +193,7 @@ group = null
 text = "Highestnt"
 flat = false
 align = 0
-_sections_unfolded = [ "Margin", "custom_fonts" ]
+_sections_unfolded = [ "Focus", "Margin", "custom_fonts" ]
 
 [node name="Volume" type="HBoxContainer" parent="." index="2"]
 
@@ -234,15 +246,17 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 305.0
 margin_right = 1005.0
-margin_bottom = 50.0
+margin_bottom = 100.0
 rect_min_size = Vector2( 700, 50 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_neighbour_top = NodePath("../../Graphics/Low")
+focus_neighbour_bottom = NodePath("../../Difficulty/Easy")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_vertical = 1
 min_value = 0.0
 max_value = 100.0
 step = 1.0
@@ -254,7 +268,7 @@ editable = true
 tick_count = 0
 ticks_on_borders = false
 focus_mode = 2
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Rect", "Theme", "Visibility", "custom_icons", "custom_styles" ]
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Rect", "Size Flags", "Theme", "Visibility", "custom_icons", "custom_styles" ]
 
 [node name="Difficulty" type="HBoxContainer" parent="." index="3"]
 
@@ -311,6 +325,10 @@ margin_right = 459.0
 margin_bottom = 100.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_neighbour_left = NodePath("../BigBoi")
+focus_neighbour_top = NodePath("../../Volume/VolSlider")
+focus_neighbour_right = NodePath("../Normal")
+focus_neighbour_bottom = NodePath("../../Graphics/Low")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -324,7 +342,7 @@ group = null
 text = "Easy"
 flat = false
 align = 0
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Focus", "custom_fonts" ]
 
 [node name="Normal" type="CheckBox" parent="Difficulty" index="2"]
 
@@ -337,6 +355,10 @@ margin_right = 741.0
 margin_bottom = 100.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_neighbour_left = NodePath("../Easy")
+focus_neighbour_top = NodePath("../../Volume/VolSlider")
+focus_neighbour_right = NodePath("../BigBoi")
+focus_neighbour_bottom = NodePath("../../Graphics/Lower")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -350,7 +372,7 @@ group = null
 text = "Normal"
 flat = false
 align = 0
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Focus", "custom_fonts" ]
 
 [node name="BigBoi" type="CheckBox" parent="Difficulty" index="3"]
 
@@ -363,6 +385,10 @@ margin_right = 1042.0
 margin_bottom = 100.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_neighbour_left = NodePath("../Normal")
+focus_neighbour_top = NodePath("../../Volume/VolSlider")
+focus_neighbour_right = NodePath("../Easy")
+focus_neighbour_bottom = NodePath("../../Graphics/Highestnt")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -376,6 +402,6 @@ group = null
 text = "BigBoi"
 flat = false
 align = 0
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Focus", "custom_fonts" ]
 
 

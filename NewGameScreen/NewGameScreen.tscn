@@ -4,7 +4,7 @@
 [ext_resource path="res://fonts/my_font_44.tres" type="DynamicFont" id=2]
 [ext_resource path="res://fonts/my_font_30.tres" type="DynamicFont" id=3]
 
-[node name="NewGameScreen" type="Control"]
+[node name="NewGameScreen" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
