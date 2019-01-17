@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://fonts/my_font_44.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Graphics.gd" type="Script" id=2]
+[ext_resource path="res://SettingsScreen/ButtonGroups/Graphics.gd" type="Script" id=2]
 [ext_resource path="res://fonts/my_font_30.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Difficulty.gd" type="Script" id=4]
+[ext_resource path="res://SettingsScreen/ButtonGroups/Difficulty.gd" type="Script" id=4]
 
-[node name="Settings" type="Control"]
+[node name="Settings" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
