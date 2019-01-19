@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Checkbox_Tick.wav-0f366459454a9e93f3ea5108f66c7b11.sample"
+
+[deps]
+
+source_file="res://sounds/Checkbox_Tick.wav"
+dest_files=[ "res://.import/Checkbox_Tick.wav-0f366459454a9e93f3ea5108f66c7b11.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

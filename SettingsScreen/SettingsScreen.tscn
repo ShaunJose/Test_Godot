@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://fonts/my_font_44.tres" type="DynamicFont" id=1]
 [ext_resource path="res://SettingsScreen/ButtonGroups/Graphics.gd" type="Script" id=2]
 [ext_resource path="res://fonts/my_font_30.tres" type="DynamicFont" id=3]
-[ext_resource path="res://SettingsScreen/ButtonGroups/Difficulty.gd" type="Script" id=4]
+[ext_resource path="res://SoundScreens/Checkbox_Tick/Checkbox_Tick.tscn" type="PackedScene" id=4]
+[ext_resource path="res://SettingsScreen/SlidingOptions/Volume.gd" type="Script" id=5]
+[ext_resource path="res://SettingsScreen/ButtonGroups/Difficulty.gd" type="Script" id=6]
 
 [node name="Settings" type="Control" index="0"]
 
@@ -148,7 +150,7 @@ rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_neighbour_left = NodePath("../Low")
 focus_neighbour_top = NodePath("../../Difficulty/Normal")
-focus_neighbour_right = NodePath("../Highestnt")
+focus_neighbour_right = NodePath("../HighestInt")
 focus_neighbour_bottom = NodePath("../../Volume/VolSlider")
 focus_mode = 2
 mouse_filter = 0
@@ -165,7 +167,7 @@ flat = false
 align = 0
 _sections_unfolded = [ "Focus", "Margin", "custom_fonts" ]
 
-[node name="Highestnt" type="CheckBox" parent="Graphics" index="3"]
+[node name="HighestInt" type="CheckBox" parent="Graphics" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -195,6 +197,8 @@ flat = false
 align = 0
 _sections_unfolded = [ "Focus", "Margin", "custom_fonts" ]
 
+[node name="Checkbox_Tick" parent="Graphics" index="4" instance=ExtResource( 4 )]
+
 [node name="Volume" type="HBoxContainer" parent="." index="2"]
 
 anchor_left = 0.0
@@ -213,6 +217,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_constants/separation = 150
 alignment = 0
+script = ExtResource( 5 )
 _sections_unfolded = [ "Anchor", "Margin", "custom_constants" ]
 
 [node name="VolTitle" type="Label" parent="Volume" index="0"]
@@ -288,7 +293,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_constants/separation = 150
 alignment = 0
-script = ExtResource( 4 )
+script = ExtResource( 6 )
 _sections_unfolded = [ "Anchor", "Margin", "custom_constants" ]
 
 [node name="DiffTitle" type="Label" parent="Difficulty" index="0"]
@@ -388,7 +393,7 @@ rect_clip_content = false
 focus_neighbour_left = NodePath("../Normal")
 focus_neighbour_top = NodePath("../../Volume/VolSlider")
 focus_neighbour_right = NodePath("../Easy")
-focus_neighbour_bottom = NodePath("../../Graphics/Highestnt")
+focus_neighbour_bottom = NodePath("../../Graphics/HighestInt")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -403,5 +408,21 @@ text = "BigBoi"
 flat = false
 align = 0
 _sections_unfolded = [ "Focus", "custom_fonts" ]
+
+[node name="Checkbox_Tick" parent="Difficulty" index="4" instance=ExtResource( 4 )]
+
+[connection signal="button_down" from="Graphics/Low" to="Graphics" method="_on_Low_button_down"]
+
+[connection signal="button_down" from="Graphics/Lower" to="Graphics" method="_on_Lower_button_down"]
+
+[connection signal="button_down" from="Graphics/HighestInt" to="Graphics" method="_on_HighestInt_button_down"]
+
+[connection signal="changed" from="Volume/VolSlider" to="Volume" method="_on_VolSlider_changed"]
+
+[connection signal="button_down" from="Difficulty/Easy" to="Difficulty" method="_on_Easy_button_down"]
+
+[connection signal="button_down" from="Difficulty/Normal" to="Difficulty" method="_on_Normal_button_down"]
+
+[connection signal="button_down" from="Difficulty/BigBoi" to="Difficulty" method="_on_BigBoi_button_down"]
 
 

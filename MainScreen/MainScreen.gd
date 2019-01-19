@@ -9,6 +9,7 @@ func _ready():
 		
 func _on_Menu_Item_Pressed(dest_scene):
 	scene_global = dest_scene
+	$Button_Click.play_sound()
 	$Fade.show() # because it's hidden first
 	$Fade.fade()
 

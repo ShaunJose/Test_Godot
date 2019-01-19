@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://MainScreen/MainScreen.gd" type="Script" id=1]
 [ext_resource path="res://images/game_logo.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://MainScreen/MenuItems/SavedReplays.tscn" type="PackedScene" id=5]
 [ext_resource path="res://MainScreen/MenuItems/Settings.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Animations/Fade.tscn" type="PackedScene" id=7]
+[ext_resource path="res://SoundScreens/Button_Click/Button_Click.tscn" type="PackedScene" id=8]
 
 [node name="MainScreen" type="Control"]
 
@@ -109,6 +110,8 @@ _sections_unfolded = [ "Rect", "Size Flags" ]
 [node name="Fade" parent="." index="1" instance=ExtResource( 7 )]
 
 visible = false
+
+[node name="Button_Click" parent="." index="2" instance=ExtResource( 8 )]
 
 [connection signal="fade_over" from="Fade" to="." method="_on_Fade_fade_over"]
 
